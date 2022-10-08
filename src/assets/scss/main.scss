@@ -1,7 +1,8 @@
-@import "utils/libs";
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/fonts";
-@import "utils/resets";
+@import "utils/library/libs";
+@import "utils/helper/";
+@import "utils/helper/";
+@import "utils/helper/fonts";
+@import "utils/base/resets";
+@import "utils/base/typography";
 
-@import "modules/wrapper.scss";
+@import "layout/pageName/sectionNameExample";
