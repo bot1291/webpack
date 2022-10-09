@@ -27,6 +27,7 @@
     "path": "^0.12.7",
     "postcss": "^8.4.17",
     "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.5.0",
     "postcss-sort-media-queries": "^4.3.0",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
