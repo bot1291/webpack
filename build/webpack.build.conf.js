@@ -1,6 +1,5 @@
 const { merge } = require('webpack-merge');
 const baseWebpackConfig = require("./webpack.base.conf")
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 
 const buildWebpackConfig = merge(baseWebpackConfig, {
     mode: "production",
@@ -10,8 +9,6 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
         maxAssetSize: 512000
     },
     plugins: [
-        new CleanWebpackPlugin(
-        )
     ]
 })
 
