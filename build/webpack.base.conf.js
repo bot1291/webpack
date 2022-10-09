@@ -79,7 +79,7 @@ module.exports = {
                 filename: 'fonts/[hash][ext][query]'
             }
         }, {
-            test: /\.scss$/,
+            test: /\.s?css$/,
             use: [
                 "style-loader",
                 {
@@ -97,24 +97,6 @@ module.exports = {
                 }, {
                     loader: "sass-loader",
                     options: { sourceMap: true }
-                }
-            ]
-        }, {
-            test: /\.css$/,
-            use: [
-                "style-loader",
-                {
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                      esModule: false,
-                    },
-                  },
-                {
-                    loader: "css-loader",
-                    options: { sourceMap: true }
-                }, {
-                    loader: "postcss-loader",
-                    options: { sourceMap: true, postcssOptions: { config: `./postcss.config.js` } }
                 }
             ]
         }]
