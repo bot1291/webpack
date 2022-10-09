@@ -8,6 +8,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     devServer: {
         port: 8081,
         hot: true,
+        open: true,
         watchFiles: [`${baseWebpackConfig.externals.paths.src}/**/*`],
         client: {
             overlay: {

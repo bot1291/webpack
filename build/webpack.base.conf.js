@@ -17,7 +17,8 @@ const PAGES = fs.readdirSync(PAGES_DIR).filter(filename => filename.endsWith(".h
 module.exports = {
     // watch: true,
     // watchOptions: {
-    //   ignored: /node_modules/
+    //   ignored: /node_modules/,
+    //   poll: 1000
     // },
     cache: {  
         type: 'filesystem',
