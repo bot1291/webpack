@@ -1,1 +1,1 @@
-console.log("lk")
+console.log('lk');
