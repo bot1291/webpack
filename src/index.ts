@@ -6,17 +6,17 @@ import './assets/scss/main.scss';
 // import "bootstrap/dist/css/bootstrap.min.css"
 
 // import "vue"
-import Vue from 'vue';
-import store from './store';
+// import { createApp } from 'vue';
+// import { store } from './store';
 
-Vue.component('example-component', require('./components/Example.vue').default);
+// createApp.component('example-component', require('./components/Example.vue').default);
 
-new Vue({
-	data() {
-		return {
-			component: false,
-		};
-	},
-	store,
-	el: '#app',
-});
+// new Vue({
+// 	data() {
+// 		return {
+// 			component: false,
+// 		};
+// 	},
+// 	store,
+// 	el: '#app',
+// });

@@ -1,12 +1,10 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+// import Vue from 'vue';
+// import { createStore } from 'vuex';
 
-Vue.use(Vuex);
+// import example from './example';
 
-import example from './example';
-
-export default new Vuex.Store({
-	modules: {
-		example,
-	},
-});
+// export const store = createStore({
+// 	modules: {
+// 		example,
+// 	},
+// });

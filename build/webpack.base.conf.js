@@ -3,7 +3,7 @@ const path = require("path")
 const fs = require('fs')
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const { VueLoaderPlugin } = require("vue-loader")
+// const { VueLoaderPlugin } = require("vue-loader")
 
 const PATHS = {
     src: path.join(__dirname, "../src"),
@@ -56,7 +56,16 @@ module.exports = {
             use: {
                 loader: "ts-loader"
             }
-        }, {
+        },{
+			test: /\.js$/,
+			exclude: "/node_modules/",
+			use: {
+				loader: "babel-loader",
+				options: {
+					presets: ["@babel/preset-env"]
+				}
+			}
+		},/* {
             test: /\.vue$/,
             loader: "vue-loader",
             options: {
@@ -64,7 +73,7 @@ module.exports = {
                     scss: "vue-style-loader!css-loader!sass-loader"
                 }
             }
-        }, {
+        },*/ {
             test: /\.(png|jpg|gif|svg)$/,
             type: "asset",
             generator: {
@@ -112,13 +121,13 @@ module.exports = {
     resolve: {
         alias: {
             "~": "src",
-            "vue$": "vue/dist/vue.js"
+            // "vue": "vue/dist/vue.js"
         },
-        extensions: [".ts"]
+        extensions: [".ts", ".tsx", ".js"]
     },
     plugins: [
-        new VueLoaderPlugin(
-        ),
+        // new VueLoaderPlugin(
+        // ),
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].[contenthash].css`
         }),
