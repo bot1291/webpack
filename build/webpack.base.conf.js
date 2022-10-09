@@ -63,9 +63,14 @@ module.exports = {
             }
         }, {
             test: /\.(png|jpg|gif|svg)$/,
-            type: "asset/resource",
+            type: "asset",
             generator: {
                 filename: "assets/img/[name][ext]",
+            },
+            parser: {
+                dataUrlCondition: {
+                    maxSize: 4096
+                }
             }
         }, {
 			test: /\.(ttf|woff|woff2|eot)$/,
