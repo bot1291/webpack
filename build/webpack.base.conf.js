@@ -28,8 +28,8 @@ module.exports = {
         paths: PATHS 
     },
     entry: {
-        app: PATHS.src,
-        lk: `${PATHS.src}/lk.js`
+        app: `${PATHS.src}/index.ts`,
+        lk: `${PATHS.src}/lk.ts`
     },
     output: {
         filename: `${PATHS.assets}js/[name].[hash].js`,
@@ -51,13 +51,10 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.js$/,
+            test: /\.ts$/,
             exclude: "/node_modules/",
-            use : {
-                loader: "babel-loader",
-                options: {
-                    presets: ["@babel/preset-env"]
-                }
+            use: {
+                loader: "ts-loader"
             }
         }, {
             test: /\.vue$/,
@@ -116,7 +113,8 @@ module.exports = {
         alias: {
             "~": "src",
             "vue$": "vue/dist/vue.js"
-        }
+        },
+        extensions: [".ts"]
     },
     plugins: [
         new VueLoaderPlugin(
